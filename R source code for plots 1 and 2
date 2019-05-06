@@ -1,0 +1,15 @@
+#Research question and plot 1:
+Question1 <- brfss2013 %>% select(sleptim1, genhlth)
+Question1 %>% filter(!is.na(genhlth), !is.na(sleptim1)) %>% group_by(genhlth) %>% summarise(Mean_sleep_time=mean(sleptim1))
+Q1 <- Question1 %>% filter(!is.na(genhlth), !is.na(sleptim1)) %>% group_by(genhlth) %>% summarise(Mean_sleep_time=mean(sleptim1))
+ggplot(data=Q1, aes(x=genhlth, y=Mean_sleep_time))+geom_point()
+
+
+#Research question and plot 2:
+Question2 <- brfss2013 %>% select(genhlth, exeroft1, exeroft2, exerhmm1, exerhmm2) %>% filter(!is.na(genhlth), !is.na(exeroft1), !is.na(exeroft2), !is.na(exerhmm1), !is.na(exerhmm2))
+Question2$exe1total_min <- ifelse(Question2$exeroft1 %/% 100 ==1, ((Question2$exerhmm1 %/% 100)*60+(Question2$exerhmm1 %% 100))*(Question2$exeroft1 %% 100)*4, ((Question2$exerhmm1 %/% 100)*60+(Question2$exerhmm1 %% 100))*(Question2$exeroft1 %% 100))
+Question2$exe2total_min <- ifelse(Question2$exeroft2 %/% 100 == 1, ((Question2$exerhmm2 %/% 100)*60+(Question2$exerhmm2 %% 100))*(Question2$exeroft2 %% 100)*4, ((Question2$exerhmm2 %/% 100)*60+(Question2$exerhmm2 %% 100))*(Question2$exeroft2 %% 100))
+Question2$total_monthly_hour <- (Question2$exe1total_min+Question2$exe2total_min)/60
+Question2 %>% group_by(genhlth) %>% summarise(Mean_exercise_time=mean(total_monthly_hour))
+Q2 <- Question2 %>% group_by(genhlth) %>% summarise(total_monthly_hour=mean(total_monthly_hour))
+ggplot(data=Q2, aes(x=genhlth, y=total_monthly_hour))+geom_point()
