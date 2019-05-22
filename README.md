@@ -12,8 +12,8 @@ This may be helpful for people who want to know the relation between sleep and h
 Plot 1: https://github.com/Freepacer/Data_Incubator_R/blob/master/Plot%201.png
 
 Result analysis: The mean sleep time is calculated by averaging all sleep time data (excluding N/A) for each general health condition
-(excluding N/A). There is apparent negative correlation between average sleep time per day and general health condition. 
-For example, the average sleep time is 7.19 hours for people with excellent general health condition, while only 6.74 hours for people with poor general health condition. Note that the relationship cannot be explained in an explanory way, because the data were acquired using phone interview. As a conclusion, we can observe obvious negative correlation bewteen average sleeping time and general health condition for US citizens.
+(excluding N/A). There is apparent positive correlation between average sleep time per day and general health condition. 
+For example, the average sleep time is 7.19 hours for people with excellent general health condition, while only 6.74 hours for people with poor general health condition. Note that the relationship cannot be explained in an explanory way, because the data were acquired using phone interview. As a conclusion, we can observe obvious positive correlation bewteen average sleeping time and general health condition for US citizens.
  
  
  
