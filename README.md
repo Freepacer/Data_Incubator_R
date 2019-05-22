@@ -1,6 +1,8 @@
-# Data Analysis
+# BRFSS Data Analysis
 
 Data source: https://www.cdc.gov/brfss/annual_data/annual_2017.html
+
+Data introduction: The Behavioral Risk Factor Surveillance System (BRFSS) is the nation’s premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services. Established in 1984 with 15 states, BRFSS now collects data in all 50 states as well as the District of Columbia and three U.S. territories. BRFSS completes more than 400,000 adult interviews each year, making it the largest continuously conducted health survey system in the world.
 
 Research quesion 1:
 
@@ -22,4 +24,4 @@ Is there any correlation between the general health condition and the overall ex
 Plot 2: https://github.com/Freepacer/Data_Incubator_R/blob/master/Plot%202.png
 
 Result analysis: The total_monthly_hour is calculated by summarizing exercise hours per month for the exercises 
-people spend the most and the second most time on (exercise times multiplied by time spent each time), then averaged over each health condition. All data entries of "N/A" are excluded.According to the graph, the average total monthly exercise time decreases from 32 to 29.6 hours/month from "excellent" to "very good" health conditions. However, from "very good" to "poor" health conditions, the average total monthly exerise time increases almost linearly from 29.6 to 34.8 hours/month. There is not a clear positive or negaive correlation bewtween average total monthly exercise time and general health condition, which is quite different with the case of average sleeping time.
+people spend the most and the second most time on (exercise times multiplied by time spent each time), then averaged over each health condition. According to the graph, the average total monthly exercise time decreases from 32 to 29.6 hours/month from "excellent" to "very good" health conditions. However, from "very good" to "poor" health conditions, the average total monthly exerise time increases almost linearly from 29.6 to 34.8 hours/month. There is not a clear positive or negaive correlation bewtween average total monthly exercise time and general health condition, which is quite different with the case of average sleeping time.
